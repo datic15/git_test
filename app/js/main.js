@@ -86,17 +86,21 @@ $(document).ready(function () {
     answer = generateExpr(); //сохранить ответ
     //проверка ответа
     $('#checkButton').click(function () {
-        if ($('#inputCheck').val() == '') //не пустое поле
+        $('#Answer').css('display', 'none');
+        var boxAnswer = $('#inputCheck').val();
+        if (boxAnswer == '') //не пустое поле
         {
             alert('Введите число');
             return;
         }
-        if (+($('#inputCheck').val()) == answer) {
+        if (+boxAnswer == answer) {
             ++trackAnswers;
+            $('#Answer').toggleClass('alert-success', true).toggleClass('alert-danger', false).text('Ответ ' + boxAnswer + ' правильный! ' + $('#expression').text() + ' ' + answer).fadeToggle();
             $('#right').text(trackAnswers);
         }
         else {
             ++trackErrors;
+            $('#Answer').toggleClass('alert-success', false).toggleClass('alert-danger', true).text('Ответ ' + boxAnswer + ' неправильный! ' + $('#expression').text() + ' ' + answer).fadeToggle();
             $('#wrong').text(trackErrors);
         }
         $('#inputCheck').val(''); //очистить ответ
