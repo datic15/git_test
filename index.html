@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Тестирование знаний математики</title>
+	<meta charset="utf-8" />
+    <script src="vendor/jquery/jquery-1.12.1.min.js"></script>
+    <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <script src="vendor/bootstrap/js/bootstrap.js"></script>
+    <script src="app/js/main.js"></script>
+    <link href="app/css/StyleSheet.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="all">
+        <!-- Табы -->
+        <div class="main">
+            <h1>Тестирование знаний математики</h1>
+            <ul id="tabs" class="nav nav-tabs" data-tabs="tabs">
+                <li class="active"><a href="#Check" data-toggle="tab">Проверка</a></li>
+                <li><a href="#Set" data-toggle="tab">Установка</a></li>
+            </ul>
+            <div id="my-tab-content" class="tab-content" style="height:auto">
+                <!-- Таба Примеров -->
+                <div class="tab-pane in active" id="Check">
+                    <h4>Решите пример:</h4>
+                    <span id="expression"></span><input size="4" maxlength="3" type="text" id="inputCheck" /><input type="button" value="Проверить" id="checkButton" />
+                </div>
+                <!-- Таба настроек -->
+                <div class="tab-pane" id="Set">
+                    <h4>Выберите тип примеров</h4>
+                    <p>
+                        <input type="checkbox" value="+" checked name="group1">Сложение<Br>
+                        <input type="checkbox" value="-" name="group1">Вычитание<Br>
+                        <input type="checkbox" value="*" name="group1">Умножение<Br>
+                        <input type="checkbox" value="/" name="group1">Деление<Br>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- Статистика ответов -->
+        <div class="stat">
+            <h3 style="margin-top:3px">Ответов:</h3>
+            <span style="color:green">Правильных: <span id="right">0</span> <br /></span>
+            <span style="color:red">Неправильных: <span id="wrong">0</span></span>
+</div>
+    </div>
+</body>
+</html>

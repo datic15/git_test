@@ -1,0 +1,26 @@
+﻿.main{
+    float:left;
+    width:800px;
+}
+.stat{
+    float:left;
+    width:200px;
+    border:solid 2px;
+    padding:5px;
+    margin-top:20px;
+    margin-left:30px;
+}
+#all{
+    position:relative;
+    width:1200px;
+    margin:auto;
+}
+#Check{
+    margin-top:10px;
+}
+#Set{
+    margin-top:10px;
+}
+#checkButton{
+    margin-left:20px;
+}
